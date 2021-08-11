@@ -35,8 +35,14 @@ body {
     color: white;
 }
 
+@keyframes smooth-background {
+    from { background-color: rgba(0, 0, 0, 0.2); }
+    to { background-color: rgba(0, 0, 0, 0.6); }
+}
+
 #top-nav a:hover {
-    background-color: rgba(0, 0, 0, 0.6);
+    animation: smooth-background 0.2s 1;
+    animation-fill-mode: forwards;
     text-decoration: underline;
 }
 
@@ -53,8 +59,21 @@ body {
 }
 
 #body-header-content h2 {
+    box-sizing: border-box;
     font-size: 16px;
     font-weight: lighter;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: block;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    border-bottom: solid 2px white;
+    box-shadow: 3px 3px 3px #333;
+}
+
+#body-header-content h2:hover {
+    font-weight: bold;
 }
 
 main {
@@ -68,14 +87,37 @@ main {
     margin-top: 15px;
 }
 
+#cards-base {
+    overflow: auto;
+}
+
+.card-holder {
+    float: left;
+    width: 30%;
+    margin-left: 2.5%;
+}
+
+.card-holder img {
+    width: 100%;
+    display: block;
+}
+
 .card-holder footer {
-    background-color: #333;
+    background-color: #444;
+    width: auto;
 }
 
 .card-holder p {
     color: white;
     text-transform: uppercase;
-    padding: 25px;
+    padding: 15px;
+    letter-spacing: 2px;
+    overflow-wrap: break-word;
+    margin-top: -4px;
+}
+
+#last-card-holder {
+    margin-right: 2.5%;
 }
 
 .article-title {
