@@ -1,8 +1,41 @@
-* {
-    margin: 0;
-    border: 0;
-    padding: 0;
+body {
     font-family: Verdana, sans-serif;
     overflow-wrap: break-word;
     box-sizing: border-box;
+    width: 90%;
+    margin: auto;
+}
+
+h1 {
+    background-color: orange;
+    color: brown;
+    text-align: center;
+    font-size: 48px;
+}
+
+h2 {
+    color: red;
+    background-color: salmon;
+    border-bottom: solid 5px red;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h3, strong, li, p {
+    color: #444;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style-position: inside;
 }
