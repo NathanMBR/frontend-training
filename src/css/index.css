@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: Verdana, sans-serif;
     overflow-wrap: break-word;
@@ -38,4 +39,32 @@ ul {
 
 li {
     list-style-position: inside;
+=======
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    font-family: 'cloister-black', Verdana, sans-serif;
+    text-align: justify;
+}
+
+body {
+    margin: auto;
+    width: 50%;
+    background-image: url('../img/bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: bottom right;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+>>>>>>> 2nd-project
 }
