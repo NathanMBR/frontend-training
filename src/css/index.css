@@ -2,7 +2,176 @@
     margin: 0;
     border: 0;
     padding: 0;
-    font-family: Verdana, sans-serif;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
     overflow-wrap: break-word;
     box-sizing: border-box;
+}
+
+body {
+    padding: 20px 10% 0;
+}
+
+#navbar {
+    width: 100%;
+    height: 50px;
+    overflow: auto;
+    background-color: #192a56;
+    line-height: 50px;
+    position: relative;
+}
+
+#navbar img {
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#navbar ul {
+    text-align: right;
+}
+
+#navbar li {
+    margin-right: 30px;
+    display: inline-block;
+    list-style: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#navbar a {
+    color: #40739e;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    color: #718093;
+    text-decoration: underline;
+}
+
+#header-bg-img {
+    width: 100%;
+    height: 440px;
+    background-image: url(../img/topo.jpg);
+    background-position: left bottom;
+    background-size: cover;
+}
+
+main {
+    text-align: center;
+}
+
+main h1 {
+    color: #222;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    margin-bottom: 25px;
+}
+
+main p {
+    line-height: 32px;
+    color: #333;
+    margin-bottom: 100px;
+}
+
+#main-section {
+    padding: 5% 10%;
+}
+
+#gallery {
+    overflow: auto;
+}
+
+.card {
+    float: left;
+    width: 30%;
+    margin-left: 3%;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h2 {
+    font-size: 16px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.card p {
+    color: gray;
+}
+
+#detailed-bg {
+    height: 90vh;
+    padding: 10%;
+    background-color: #003E54;
+    background-image: url(../img/bg_detalhe.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+
+#detailed-bg h1 {
+    width: 90%;
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: 300;
+}
+
+#detailed-bg p {
+    width: 65%;
+    line-height: 24px;
+} 
+
+#detailed-bg h1, #detailed-bg p {
+    color: white;
+    text-align: left;
+}
+
+#contact {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#contact p {
+    color: #003E54;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-style: normal;
+    margin: 50px 0;
+}
+
+#contact iframe {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+#page-footer {
+    background-color: #192a56;
+    color: white;
+    height: 50px;
+}
+
+#page-footer p {
+    text-align: center;
+    letter-spacing: 5px;
+    color: #40739e;
+    line-height: 50px;
+}
+
+#page-footer a {
+    text-decoration: none;
+}
+
+#page-footer a:link, #page-footer a:visited, #page-footer a:active {
+    color: #40739e;
+    text-decoration: none;
+}
+
+#page-footer a:hover {
+    color: #718093;
+    text-decoration: underline;
 }
