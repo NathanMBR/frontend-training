@@ -11,59 +11,72 @@
         <meta name="description" content="Fake curriculum, made just to train my HTML and CSS abilities.">
     </head>
     <body>
-        <header id="body-header">
-            <nav id="top-nav">
+        <header>
+            <nav id="navbar">
+                <img src="../img/logo.png" alt="Fashion logo">
                 <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Quem sou eu</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-
-            <div id="body-header-content">
-                <h1>Curso Web Fundamentos</h1>
-                <h2>Aprenda HTML, CSS e Javascript</h2>
-            </div>
+            <div id="header-bg-img"></div>
         </header>
-        
+
         <main>
-            <section class="main-section" id="cards-base">
-                <div class="card-holder" id="card-1">
-                    <img src="../img/card_01.png" alt="Seletores">
-                    <footer>
-                        <p>Seletores</p>
-                    </footer>
-                </div>
+            <section id="main-section">
+                <article>
+                    <h1>New Fashion Everything Never Enough</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat nisi non ante dictum congue. Cras id odio gravida, posuere velit sed, lacinia mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vehicula, ipsum vel congue cursus, mi neque tincidunt enim, egestas porttitor felis neque et risus. Maecenas fringilla hendrerit enim malesuada laoreet. Aenean quis tortor a odio tempus tincidunt. Vivamus rutrum nulla sed metus congue bibendum. Sed ut aliquam purus. Donec odio mauris, commodo sed dignissim vitae, dapibus eget mauris.</p>
+                </article>
 
-                <div class="card-holder" id="card-2">
-                    <img src="../img/card_02.jpg" alt="Posicionamento">
-                    <footer>
-                        <p>Posicionamento</p>
-                    </footer>
-                </div>
+                <div id="gallery">
+                    <div class="card">
+                        <img src="../img/modelo1.jpg" alt="First model">
 
-                <div class="card-holder" id="last-card-holder">
-                    <img src="../img/card_03.jpg" alt="Fontes e ícones">
-                    <footer>
-                        <p>Fontes e ícones</p>
-                    </footer>
+                        <footer>
+                            <h2>Vest Romasa</h2>
+                            <p>Strong &AMP; Charismatic</p>
+                        </footer>
+                    </div>
+
+                    <div class="card">
+                        <img src="../img/modelo2.jpg" alt="Second model">
+
+                        <footer>
+                            <h2>Jacket Fima</h2>
+                            <p>Strong Personality</p>
+                        </footer>
+                    </div>
+
+                    <div class="card">
+                        <img src="../img/modelo3.jpg" alt="Third model">
+
+                        <footer>
+                            <h2>Jacket Black Kira</h2>
+                            <p>Power Fascinating</p>
+                        </footer>
+                    </div>
                 </div>
             </section>
 
-            <section class="main-section">
-                <article>
-                    <header>
-                        <h3 class="article-title">Título</h3>
-                    </header>
+            <section id="detailed-bg">
+                <h1>Everything never enough Just fashion</h1>
+                <p>
+                    Praesent placerat eros eget lacus ullamcorper, id dapibus ante vestibulum. Curabitur quis condimentum diam. Duis aliquet erat vel laoreet tincidunt. Pellentesque vitae varius ligula. Phasellus in nibh tempus, gravida justo et, suscipit felis. Cras ornare arcu ac sodales tincidunt. Mauris vehicula erat vel ligula porttitor imperdiet. Curabitur nec magna urna. Sed porta ex ex, at pulvinar nibh aliquet quis. Integer dapibus congue vestibulum. Phasellus bibendum lobortis quam, nec sollicitudin nisl volutpat at.
+                </p>
+            </section>
 
-                    <p>Primeiro parágrafo de exemplo</p>
-                    <p>Segundo parágrafo de exemplo</p>
-                </article>
+            <section>
+                <address id="contact">
+                    <p>Call me now for design <br> 012-1234-4567</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224486.8742881119!2d-52.95499102375925!3d-28.46124868993715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fd492498d6957f%3A0x9a8b601ccba4050d!2sN%C3%A3o-Me-Toque%20-%20RS%2C%2099470-000!5e0!3m2!1spt-BR!2sbr!4v1629146029485!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </address>
             </section>
         </main>
 
-        <footer id="body-footer">
-            <p>Copyright &COPY; 2016</p>
+        <footer id="page-footer">
+            <p>Copyright &COPY; <a href="#">fastfashion.com</a></p>
         </footer>
     </body>
 </html>

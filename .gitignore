@@ -1,16 +1,2 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 .vscode/
-src/img/*
-=======
-src/fonts/*
 !.gitkeep
-.vscode/
->>>>>>> 2nd-project
-=======
-.vscode/
-src/img/*
-!src/img/card_01.png
-!src/img/card_02.jpg
-!src/img/card_03.jpg
->>>>>>> 3rd-project
