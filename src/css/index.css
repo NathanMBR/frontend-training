@@ -1,177 +1,105 @@
 * {
+    font-family: Arial, Helvetica, Verdana, sans-serif;
     margin: 0;
-    border: 0;
-    padding: 0;
-    font-family: Verdana, Helvetica, Arial, sans-serif;
-    overflow-wrap: break-word;
     box-sizing: border-box;
 }
 
-body {
-    padding: 20px 10% 0;
-}
-
-#navbar {
+html, body {
     width: 100%;
-    height: 50px;
-    overflow: auto;
-    background-color: #192a56;
-    line-height: 50px;
-    position: relative;
+    height: 100%;
 }
 
-#navbar img {
-    position: absolute;
-    left: 20%;
-    top: 50%;
-    transform: translateY(-50%);
+label:not(.inline), textarea {
+    display: block;
 }
 
-#navbar ul {
+.block {
+    display: block;
+}
+
+#root-header {
+    width: 35%;
+    height: 130vh;
+    padding: 40px;
     text-align: right;
+    background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../img/bg.jpg);
+    background-position: bottom left;
+    background-size: cover;
+    position: fixed;
 }
 
-#navbar li {
-    margin-right: 30px;
-    display: inline-block;
-    list-style: none;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+#root-header img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: 40px;
 }
 
-#navbar a {
-    color: #40739e;
+#root-header h1 {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+#root-header strong {
+    color: white;
+}
+
+#root-header h1, #root-header strong {
+    font-weight: normal;
+}
+
+#root-header h2 {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+#portfolio-link {
+    text-decoration-style: dotted;
+}
+
+#root-header h2, #portfolio-link {
+    color: #656565;
+}
+
+#root-header footer {
+    height: 40vh;
+}
+
+#root-header footer * {
+    position: relative;
+    top: 80%;
+    color: #656565;
+    font-size: 12px;
+}
+
+#root-header footer a {
+    position:static;
     text-decoration: none;
 }
 
-#navbar a:hover {
-    color: #718093;
-    text-decoration: underline;
+
+#root-header i {
+    margin-left: 10px;
+    top: 75%;
+    color: rgba(255, 255, 255, .5);
+    font-size: 20px;
+    transition-property: color;
+    transition-duration: .15s;
+    transition-timing-function: ease-out;
 }
 
-#header-bg-img {
-    width: 100%;
-    height: 440px;
-    background-image: url(../img/topo.jpg);
-    background-position: left bottom;
-    background-size: cover;
+#root-header i:hover {
+    color: white;
 }
 
 main {
-    text-align: center;
-}
-
-main h1 {
-    color: #222;
-    font-size: 32px;
-    font-weight: bold;
-    letter-spacing: 0px;
-    margin-bottom: 25px;
-}
-
-main p {
-    line-height: 32px;
-    color: #333;
-    margin-bottom: 100px;
-}
-
-#main-section {
-    padding: 5% 10%;
-}
-
-#gallery {
-    overflow: auto;
-}
-
-.card {
-    float: left;
-    width: 30%;
-    margin-left: 3%;
-}
-
-.card img {
-    width: 100%;
-}
-
-.card h2 {
-    font-size: 16px;
-    color: #333;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.card p {
-    color: gray;
-}
-
-#detailed-bg {
-    height: 90vh;
-    padding: 10%;
-    background-color: #003E54;
-    background-image: url(../img/bg_detalhe.png);
-    background-position: right bottom;
-    background-repeat: no-repeat;
-}
-
-#detailed-bg h1 {
-    width: 90%;
-    text-transform: uppercase;
-    font-size: 48px;
-    font-weight: 300;
-}
-
-#detailed-bg p {
     width: 65%;
-    line-height: 24px;
-} 
-
-#detailed-bg h1, #detailed-bg p {
-    color: white;
-    text-align: left;
-}
-
-#contact {
-    text-align: center;
-    vertical-align: middle;
-}
-
-#contact p {
-    color: #003E54;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 32px;
-    font-style: normal;
-    margin: 50px 0;
-}
-
-#contact iframe {
-    width: 100%;
-    margin-bottom: 40px;
-}
-
-#page-footer {
-    background-color: #192a56;
-    color: white;
-    height: 50px;
-}
-
-#page-footer p {
-    text-align: center;
-    letter-spacing: 5px;
-    color: #40739e;
-    line-height: 50px;
-}
-
-#page-footer a {
-    text-decoration: none;
-}
-
-#page-footer a:link, #page-footer a:visited, #page-footer a:active {
-    color: #40739e;
-    text-decoration: none;
-}
-
-#page-footer a:hover {
-    color: #718093;
-    text-decoration: underline;
+    height: 100vh;
+    padding: 10px;
+    position: fixed;
+    left: 35%;
+    overflow-y: auto;
 }
