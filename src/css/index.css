@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
 * {
-    font-family: Arial, Helvetica, Verdana, sans-serif;
+    font-family: 'Source Sans Pro', Arial, Helvetica, Verdana, sans-serif;
     margin: 0;
+    padding: 0;
+    color: #656565;
     box-sizing: border-box;
 }
 
@@ -9,13 +13,86 @@ html, body {
     height: 100%;
 }
 
-label:not(.inline), textarea {
+h1, h2, h3, h4, h5, h6, strong {
+    color: #787878;
+    font-weight: normal;
+    margin: 1em 0;
+}
+
+h1 {
+    font-size: 2.25rem;
+}
+
+h2 {
+    font-size: 1.875rem;
+}
+
+h3 {
+    font-size: 1.625rem;
+}
+
+h4 {
+    font-size: 1.375rem;
+}
+
+h5 {
+    font-size: 1.125rem;
+}
+
+h6 {
+    font-size: 0.875rem;
+}
+
+sub, sup {
+    font-size: 0.75rem;
+}
+
+blockquote {
+    border-left: solid 5px #efefef;
+    margin: 2em 0;
+    padding: .5em 0 .5em 1.5em;
+}
+
+code {
+    background: #f7f7f7;
+    border: solid 2px #efefef;
+    border-radius: .35em;
+    font-size: .9em;
+    margin-left: .35em;
+    padding: .25em .35em;
+    font-family: 'Courier New', monospace;
+    color: #828282;
+}
+
+pre code {
+    display: block;
+    margin-left: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: color, text-decoration, text-decoration-color;
+    transition-duration: .15s;
+    transition-timing-function: ease-in-out;
+}
+
+a:hover {
+    color: #49bf9d;
+}
+
+ul, ol {
+    list-style-position: inside;
+    padding-left: 1em;
+}
+
+li:not(.ul-icons li:first-child) {
+    padding-left: .5em;
+}
+
+.block, label:not(.inline), textarea {
     display: block;
 }
 
-.block {
-    display: block;
-}
 
 #root-header {
     width: 35%;
@@ -23,7 +100,7 @@ label:not(.inline), textarea {
     padding: 40px;
     text-align: right;
     background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../img/bg.jpg);
-    background-position: bottom left;
+    background-position: center top;
     background-size: cover;
     position: fixed;
 }
@@ -46,10 +123,6 @@ label:not(.inline), textarea {
     color: white;
 }
 
-#root-header h1, #root-header strong {
-    font-weight: normal;
-}
-
 #root-header h2 {
     margin-top: 20px;
     font-size: 14px;
@@ -57,11 +130,13 @@ label:not(.inline), textarea {
 }
 
 #portfolio-link {
-    text-decoration-style: dotted;
+    text-decoration: underline dotted;
+    text-decoration-color: #656565;
 }
 
-#root-header h2, #portfolio-link {
-    color: #656565;
+#portfolio-link:hover {
+    text-decoration: none;
+    text-decoration-color: #656565;
 }
 
 #root-header footer {
@@ -71,7 +146,6 @@ label:not(.inline), textarea {
 #root-header footer * {
     position: relative;
     top: 80%;
-    color: #656565;
     font-size: 12px;
 }
 
@@ -98,8 +172,80 @@ label:not(.inline), textarea {
 main {
     width: 65%;
     height: 100vh;
-    padding: 10px;
+    padding: 72px 36px;
     position: fixed;
     left: 35%;
     overflow-y: auto;
+}
+
+.ul-alternative {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.ul-alternative li {
+    border-bottom: 2px solid #ccc;
+    padding-left: 0;
+}
+
+.ul-alternative li:last-child {
+    border-bottom: none;
+}
+
+.ul-icons {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.ul-icons li {
+    display: inline-block;
+    font-size: 1.5em;
+}
+
+.ul-icons i {
+    color: #49bf9d;
+}
+
+.btn-default {
+    display: inline-block;
+    margin: 3px;
+    padding: .75em 2em;
+    background-color: #49bf9d;
+    border: solid 2px #49bf9d;
+    color: white;
+    border-radius: 5px;
+    font-size: .9em;
+    text-align: center;
+}
+
+.btn-default-stroke {
+    background-color: white;
+    border-color: #efefef;
+    color: inherit;
+}
+
+.btn-default-small {
+    font-size: .65em;
+    padding: .75em 1.5em;
+}
+
+.btn-default-full {
+    display: block;
+}
+
+.btn-holder {
+    overflow: auto;
+}
+
+.btn-group  {
+    width: 45%;
+    float: left;
+}
+
+.btn-group:not(.btn-group:last-child) {
+    margin-right: 5%;
+}
+
+.btn-group div {
+    margin-bottom: 2em;
 }

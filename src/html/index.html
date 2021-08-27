@@ -180,7 +180,7 @@
                 <h3>Elements</h3>
 
                 <h4>Text</h4>
-                <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>. This is <sup>superscript</sup> text and this is <sub>subscript</sub> text. This is <u>underlined</u> and this is code:<code>for (;;) { ... }</code>. Finally, this is a <a href="#">link</a>.</p>
+                <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>. This is <sup>superscript</sup> text and this is <sub>subscript</sub> text. This is <u>underlined</u> and this is code: <code>while (&LT;condition&GT;) { ... }</code>. Finally, this is a <a href="#">link</a>.</p>
 
                 <h1>H1 Title</h1>
                 <h2>H2 Title</h2>
@@ -211,11 +211,9 @@
             
                 <h4>Preformatted</h4>
                 <pre>
-                    <code>
-&LT;script&GT;
+<code>&LT;script&GT;
     alert('Hello, world!');
-&LT;/script&GT;
-                    </code>
+&LT;/script&GT;</code>
                 </pre>
             </section>
 
@@ -244,36 +242,47 @@
                 </ul>
 
                 <h4>Icons</h4>
-                <div id="main-icons">
-                    <i class="devicon-facebook-plain"></i>
-                    <i class="devicon-twitter-plain"></i>
-                    <i class="devicon-linkedin-plain"></i>
-                    <i class="devicon-github-original"></i>
-                </div>
+                <ul class="ul-icons">
+                    <li>
+                        <i class="devicon-facebook-plain"></i>
+                    </li>
+
+                    <li>
+                        <i class="devicon-twitter-plain"></i>
+                    </li>
+
+                    <li>
+                        <i class="devicon-linkedin-plain"></i>
+                    </li>
+
+                    <li>
+                        <i class="devicon-github-original"></i>
+                    </li>
+                </ul>
                 
                 <h4>Actions</h4>
-                <div>
-                    <div>
+                <div class="btn-holder">
+                    <div class="btn-group btn-group-partial">
                         <div>
-                            <button>Default</button>
-                            <button>Default</button>    
+                            <a href="#" class="btn-default">Default (partial)</a>
+                            <a href="#" class="btn-default btn-default-stroke">Default (partial)</a>    
                         </div>
                         
                         <div>
-                            <button>Default</button>
-                            <button>Default</button>    
+                            <a href="#" class="btn-default btn-default-small">Small (partial)</a>
+                            <a href="#" class="btn-default btn-default-small btn-default-stroke btn-default-small">Small (partial)</a>    
                         </div>
                     </div>
     
-                    <div>
+                    <div class="btn-group btn-group-full">
                         <div>
-                            <button>Default</button>
-                            <button>Default</button>    
+                            <a href="#" class="btn-default btn-default-full">Default (full)</a>
+                            <a href="#" class="btn-default btn-default-stroke btn-default-full">Default (full)</a>    
                         </div>
                         
                         <div>
-                            <button>Default</button>
-                            <button>Default</button>    
+                            <a href="#" class="btn-default btn-default-small btn-default-full">Small (full)</a>
+                            <a href="#" class="btn-default btn-default-stroke btn-default-small btn-default-full">Small (full)</a>
                         </div>
                     </div>
                 </div>
@@ -291,6 +300,13 @@
                             <th>Price</th>
                         </tr>
                     </thead>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td>100.00</td>
+                        </tr>
+                    <tfoot>
+
+                    </tfoot>
 
                     <tbody>
                         <tr>
@@ -323,12 +339,8 @@
                             <td>29.99</td>
                         </tr>
                     </tbody>
-
-                    <tfoot>
-
-                    </tfoot>
                 </table>
-
+                
                 <h4>Alternative</h4>
                 <table>
                     <thead>
@@ -339,6 +351,13 @@
                         </tr>
                     </thead>
 
+                    <tfoot>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td>100.00</td>
+                        </tr>
+                    </tfoot>
+                    
                     <tbody>
                         <tr>
                             <td>Item One</td>
@@ -370,11 +389,39 @@
                             <td>29.99</td>
                         </tr>
                     </tbody>
-
-                    <tfoot>
-
-                    </tfoot>
                 </table>
+            </section>
+
+            <section>
+                <h3>Buttons</h3>
+
+                <div class="btn-holder">
+                    <div class="btn-group">
+                        <div>
+                            <button class="btn-default">Default</button>
+                            <button class="btn-default btn-default-stroke">Default</button>    
+                        </div>
+                        
+                        <div>
+                            <button class="btn-default btn-default-small">Small</button>
+                            <button class="btn-default btn-default-stroke btn-default-small">Small</button>    
+                        </div>
+                    </div>
+    
+                    <div class="btn-group">
+                        <div>
+                            <button class="btn-default btn-default-full">Default</button>
+                            <button class="btn-default btn-default-stroke btn-default-full">Default</button>    
+                        </div>
+                        
+                        <div>
+                            <button class="btn-default btn-default-small btn-default-full">Small</button>
+                            <button class="btn-default btn-default-stroke btn-default-small btn-default-full">Small</button>
+                        </div>
+                    </div>
+
+                    <input type="submit" class="btn-default" value="Send">
+                </div>
             </section>
 
             <section>
@@ -395,15 +442,9 @@
                     </select>
 
                     <label for="single">Choose priority</label> <br>
-
-                    <input type="radio" name="single" id="lp" value="1">
-                    <label for="lp" class="inline">Low priority</label>
-
-                    <input type="radio" name="single" id="mp" value="2">
-                    <label for="mp" class="inline">Medium priority</label>
-
-                    <input type="radio" name="single" id="hp" value="3">
-                    <label for="hp" class="inline">High priority</label>
+                    <label class="inline"><input type="radio" name="single" value="1">Low priority</label>
+                    <label class="inline"><input type="radio" name="single" value="2">Medium priority</label>
+                    <label class="inline"><input type="radio" name="single" value="3">High priority</label>
                     
                     <input type="checkbox" name="human">
                     <label for="human" class="inline">I'm not a robot</label>
@@ -414,8 +455,8 @@
                     <label for="message">Write a message</label>
                     <textarea name="message" id="message" placeholder="Your message here..."></textarea>
 
-                    <button>Send</button>
-                    <button>Clear</button>
+                    <input type="submit" class="btn-default" value="Send">
+                    <input type="reset" class="btn-default btn-default-stroke" value="Clear">
                 </form>
             </section>
 
@@ -446,18 +487,21 @@
                     </div>
                 </div>
             </section>
-
+            
             <section>
-                <h3>Left & Right</h3>
-                <div id="text-img-left">
-                    <img src="../img/generic_avatar.jpg" alt="Generic avatar in the left">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan sodales massa, sed ullamcorper nulla blandit vel. Etiam dignissim sem eget velit convallis, non pharetra nisl mattis. Vestibulum a ex nunc. In ac diam eleifend, accumsan nisl porttitor, fringilla nibh. Donec in eleifend odio. Ut interdum, diam sed pretium bibendum, eros lectus ultrices neque, id molestie nisl nibh id nibh. Ut maximus rutrum accumsan. Cras at sapien quam. Integer consequat lectus arcu, non tristique sem aliquet rhoncus. Suspendisse facilisis risus ut sem dapibus, ac sodales quam porta. Mauris quis nulla vulputate lorem egestas sagittis. Nulla mattis tellus in magna accumsan scelerisque.</p>
-                </div>
+                <article>
+                    <h3>Left & Right</h3>
 
-                <div id="text-img-right">
-                    <img src="../img/generic_avatar.jpg" alt="Generic avatar in the right">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis purus sit amet tellus posuere, non suscipit felis condimentum. Morbi at pulvinar magna. Nullam eget dui eros. Vestibulum consequat leo nisi, id mattis nunc pulvinar non. Nunc efficitur mollis luctus. Mauris quam massa, eleifend non tincidunt vitae, dictum tincidunt purus. Mauris iaculis risus ac rutrum ullamcorper. Phasellus et mi ut turpis maximus dictum et non diam. Nullam lacinia scelerisque dui, eget rhoncus ipsum bibendum in. Sed vitae justo eget ipsum vestibulum accumsan non et leo.</p>
-                </div>
+                    <div id="text-img-left">
+                        <img src="../img/generic_avatar.jpg" alt="Generic avatar in the left">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan sodales massa, sed ullamcorper nulla blandit vel. Etiam dignissim sem eget velit convallis, non pharetra nisl mattis. Vestibulum a ex nunc. In ac diam eleifend, accumsan nisl porttitor, fringilla nibh. Donec in eleifend odio. Ut interdum, diam sed pretium bibendum, eros lectus ultrices neque, id molestie nisl nibh id nibh. Ut maximus rutrum accumsan. Cras at sapien quam. Integer consequat lectus arcu, non tristique sem aliquet rhoncus. Suspendisse facilisis risus ut sem dapibus, ac sodales quam porta. Mauris quis nulla vulputate lorem egestas sagittis. Nulla mattis tellus in magna accumsan scelerisque.</p>
+                    </div>
+
+                    <div id="text-img-right">
+                        <img src="../img/generic_avatar.jpg" alt="Generic avatar in the right">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis purus sit amet tellus posuere, non suscipit felis condimentum. Morbi at pulvinar magna. Nullam eget dui eros. Vestibulum consequat leo nisi, id mattis nunc pulvinar non. Nunc efficitur mollis luctus. Mauris quam massa, eleifend non tincidunt vitae, dictum tincidunt purus. Mauris iaculis risus ac rutrum ullamcorper. Phasellus et mi ut turpis maximus dictum et non diam. Nullam lacinia scelerisque dui, eget rhoncus ipsum bibendum in. Sed vitae justo eget ipsum vestibulum accumsan non et leo.</p>
+                    </div>    
+                </article>
             </section>
         </main>
 
