@@ -13,7 +13,11 @@ html, body {
     height: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, strong {
+p {
+    margin-bottom: 1em;
+}
+
+h1, h2, h3, h4, h5, h6, strong:not(main strong) {
     color: #787878;
     font-weight: normal;
     margin: 1em 0;
@@ -78,6 +82,7 @@ a {
 
 a:hover {
     color: #49bf9d;
+    cursor: pointer;
 }
 
 ul, ol {
@@ -93,6 +98,40 @@ li:not(.ul-icons li:first-child) {
     display: block;
 }
 
+input, textarea, select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: solid 2px transparent;
+    border-radius: 5px;
+    background-color: #ddd;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border: solid 2px #49bf9d;
+}
+
+input[type = radio], input[type = checkbox] {
+    width: auto;
+    margin-right: 5px;
+}
+
+input[type = submit] {
+    cursor: pointer;
+}
+
+textarea {
+    height: 10em;
+}
+
+label:not(label:has(input[type = radio])), label:not(label:has(input[type = checkbox])) {
+    margin-top: 10px;
+}
+
+.inline {
+    display: inline;
+}
 
 #root-header {
     width: 35%;
@@ -139,36 +178,6 @@ li:not(.ul-icons li:first-child) {
     text-decoration-color: #656565;
 }
 
-#root-header footer {
-    height: 40vh;
-}
-
-#root-header footer * {
-    position: relative;
-    top: 80%;
-    font-size: 12px;
-}
-
-#root-header footer a {
-    position:static;
-    text-decoration: none;
-}
-
-
-#root-header i {
-    margin-left: 10px;
-    top: 75%;
-    color: rgba(255, 255, 255, .5);
-    font-size: 20px;
-    transition-property: color;
-    transition-duration: .15s;
-    transition-timing-function: ease-out;
-}
-
-#root-header i:hover {
-    color: white;
-}
-
 main {
     width: 65%;
     height: 100vh;
@@ -176,6 +185,64 @@ main {
     position: fixed;
     left: 35%;
     overflow-y: auto;
+}
+
+#rw-cards-holder {
+    overflow: auto;
+}
+
+.rw-cards-column {
+    width: 45%;
+    float: left;
+}
+
+.rw-cards-column:first-child {
+    margin-right: 10%;
+}
+
+.rw-card {
+    margin-bottom: 2em;
+}
+
+.rw-card img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.rw-card h4 {
+    margin-top: 0;
+}
+
+.git-holder {
+    width: 100%;
+    overflow: auto;
+    padding-top: 25px;
+}
+
+.git-holder .git-form {
+    width: 64%;
+    margin-right: 2%;
+}
+
+.git-holder .git-form .git-form-data {
+    width: 48%;
+    float: left;
+}
+
+.git-holder .git-form .git-form-data:first-child {
+    margin-right: 4%;
+}
+
+.git-holder .git-address {
+    width: 34%;
+}
+
+.git-holder .git-address p {
+    margin-bottom: 1em;
+}
+
+.git-holder .git-form, .git-holder .git-address {
+    float: left;
 }
 
 .ul-alternative {
@@ -216,6 +283,16 @@ main {
     border-radius: 5px;
     font-size: .9em;
     text-align: center;
+    width: auto;
+    transition: all;
+    transition-duration: .15s;
+    transition-timing-function: ease-in-out;
+}
+
+.btn-default:hover {
+    cursor: pointer;
+    background-color: #60d0b0;
+    border-color: #60d0b0;
 }
 
 .btn-default-stroke {
@@ -224,13 +301,25 @@ main {
     color: inherit;
 }
 
+.btn-default-stroke:hover {
+    color: #49bf9d;
+    background-color: white;
+    border-color: transparent;
+    box-shadow: 0 0 5px 2px #49bf9d;
+}
+
 .btn-default-small {
     font-size: .65em;
     padding: .75em 1.5em;
 }
 
+.btn-default-big {
+    font-size: 1em;
+}
+
 .btn-default-full {
     display: block;
+    width: 100%;
 }
 
 .btn-holder {
@@ -248,4 +337,133 @@ main {
 
 .btn-group div {
     margin-bottom: 2em;
+}
+
+.table {
+    width: 100%;
+    margin: 0 0 2em 0;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table th {
+    background-color: #ccc;
+}
+
+.table th, td {
+    padding: .75em;
+}
+
+.table tbody td {
+    border-bottom: solid 1px #ccc;
+}
+
+.table tbody tr:first-child td {
+    border-top: solid 2px #656565;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: solid 2px #656565;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #eee;
+}
+
+.table-alternative thead {
+    border: solid 2px #ccc;
+}
+
+.table-alternative tbody td, .table-alternative tbody tr:first-child td, .table-alternative tbody tr:last-child td {
+    border: solid 2px #ddd;
+}
+
+.gallery-principal img {
+    width: 100%;
+}
+
+.gallery-cards-row {
+    overflow: auto;
+}
+
+.gallery-principal, .gallery-cards-row {
+    margin-bottom: 2%;
+}
+
+.gallery-card {
+    float: left;
+    width: 32%;
+}
+
+.gallery-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.gallery-card:not(.gallery-card:last-child) {
+    margin-right: 2%;
+}
+
+.lar-holder {
+    overflow: auto;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.lar-to-left * {
+    float: left;
+}
+
+.lar-to-right * {
+    float: right;
+}
+
+.lar-to-left img {
+    margin-right: 1em;
+}
+
+.lar-to-right img {
+    margin-left: 1em;
+}
+
+#root-footer {
+    width: 35%;
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    padding-right: 40px;
+    text-align: right;
+}
+
+#root-footer * {
+    font-size: 12px;
+}
+
+#root-footer a {
+    text-decoration: none;
+}
+
+#root-footer .hidden {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+#root-footer i {
+    margin-left: 10px;
+    text-align: right;
+    color: rgba(255, 255, 255, .5);
+    font-size: 20px;
+    transition-property: color;
+    transition-duration: .15s;
+    transition-timing-function: ease-out;
+}
+
+#root-footer i:hover {
+    color: white;
+}
+
+#root-footer p {
+    margin-top: 10px;
 }
