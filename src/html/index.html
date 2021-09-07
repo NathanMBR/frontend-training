@@ -447,14 +447,38 @@
                         <option value="2">Option 2</option>
                         <option value="3">Option 3</option>
                     </select>
+                    
+                    <div class="radio-holder">
+                        <label for="single">Choose priority:</label>
+                        <label class="radio-label" for="single1">
+                            <input type="radio" name="single" id="single1" value="1" checked>
+                            <div class="radio-box"></div>
+                            <span>Low priority</span>
+                        </label>
 
-                    <label for="single">Choose priority:</label>
-                    <label><input type="radio" name="single" value="1" checked>Low priority</label>
-                    <label><input type="radio" name="single" value="2">Medium priority</label>
-                    <label><input type="radio" name="single" value="3">High priority</label>
+                        <label class="radio-label" for="single2">
+                            <input type="radio" name="single" id="single2" value="2">
+                            <div class="radio-box"></div>
+                            <span>Medium priority</span>
+                        </label>
 
-                    <label><input type="checkbox" name="human">I'm not a robot</label>
-                    <label><input type="checkbox" name="copy">Send me a copy of this form</label>
+                        <label class="radio-label" for="single3">
+                            <input type="radio" name="single" id="single3" value="3">
+                            <div class="radio-box"></div>
+                            <span>High priority</span>
+                        </label>    
+                    </div>
+                    
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="human">
+                        <div class="checkbox-box"></div>
+                        <span>I'm not a robot</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="copy">
+                        <div class="checkbox-box"></div>
+                        <span>Send me a copy of this form</span>
+                    </label>
 
                     <label for="message">Write a message</label>
                     <textarea name="message" id="message" placeholder="Your message here..."></textarea>
